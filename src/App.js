@@ -1,25 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Container} from './Styles';
+import StackedAreaChart from './Area Charts/StackedAreaChart';
+import BasicLineChart from './Line Charts/BasicLineChart'; 
+import BasicColumnChart from './Column Charts/BasicColumnChart';
+import CustomDataLabelBarChart from './Bar Charts/CustomDataLabelBarChart';
+import LineAreaColumnChart from './Mixed Charts/LineAreaColumnChart';
+import SimplePieChart from './Pie and Donut Chart/SimplePieChart';
+import SimpleDonutChart from './Pie and Donut Chart/SimpleDonutChart';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <BasicLineChart />
+      <StackedAreaChart />
+      <BasicColumnChart />
+      <CustomDataLabelBarChart />
+      <LineAreaColumnChart />
+      <SimplePieChart />
+      <SimpleDonutChart />
+    </Container>
+
+
   );
 }
 
